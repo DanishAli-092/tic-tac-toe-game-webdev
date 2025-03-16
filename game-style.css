@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(circle 950px at 2.5% 8%, rgba(44, 103, 176, 1) 0%, rgba(35, 56, 136, 1) 90%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1rem;
+  color: #efeef4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 20px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(5, 3, 4, 0.3);
+  font-size: 2.5rem;
+  color: #463eb0;
+  background-color: #c7e1ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  background-color: #add8e6;
+}
+
+#reset-btn, #new-btn {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  background-color: #222;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#reset-btn:hover, #new-btn:hover {
+  background-color: #444;
+}
+
+.msg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+
+/* 🎭 Personal Image in the Top-Right Corner */
+.corner-image {
+  position: fixed;  /* Keeps it in the corner */
+  top: 15px;  /* Distance from the top */
+  right: 15px;  /* Distance from the right */
+  width: 60px;  /* Adjust the size */
+  height: 60px;
+  border-radius: 50%;  /* Makes it circular */
+  border: 2px solid white;  /* Optional border */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+.corner-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  transition: 0.3s ease-in-out;
+}
+
